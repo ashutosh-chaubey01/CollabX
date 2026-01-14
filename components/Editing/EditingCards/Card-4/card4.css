@@ -1,0 +1,9 @@
+.card {
+  -webkit-text-stroke: 1px white;
+}
+
+.card,
+.card p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

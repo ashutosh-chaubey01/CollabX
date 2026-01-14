@@ -1,0 +1,14 @@
+#card {
+  font-family: "Ballet", sans-serif;
+}
+
+#card-back {
+  font-family: "Baskervville", sans-serif;
+  color: #af9e77;
+}
+
+#card p,
+#card-back p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

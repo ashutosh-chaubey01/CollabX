@@ -1,0 +1,18 @@
+import { NextResponse } from "next/server";
+import { connectToDatabase } from "@/lib/db";
+
+export async function GET() {
+  try {
+    await connectToDatabase();
+    return NextResponse.json({
+      status: "ok",
+      time: new Date().toISOString(),
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { status: "error", message: (error as Error).message },
+      { status: 500 }
+    );
+  }
+}
+
