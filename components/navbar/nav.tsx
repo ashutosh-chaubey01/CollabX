@@ -61,6 +61,9 @@ function Nav() {
          <a className={variants.navStyle} href="/explore-projects">
           Explore Projects
         </a>
+        <a className={variants.navStyle} href="/explore">
+          Hackathon
+        </a>
         {!logging ? (
           <a className={variants.navStyle} href="/auth">
             Join
