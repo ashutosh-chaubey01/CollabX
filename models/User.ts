@@ -4,6 +4,8 @@ export interface UserSchema {
   fullName: string;
   email: string;
   passwordHash: string;
+  passwordResetTokenHash?: string;
+  passwordResetExpiresAt?: Date;
   role: "user" | "admin";
   slug: string;
   jobTitle?: string;
@@ -34,6 +36,8 @@ const userSchema = new Schema<UserSchema>(
     fullName: { type: String, required: true },
     email: { type: String, required: true, unique: true, index: true },
     passwordHash: { type: String, required: true },
+    passwordResetTokenHash: { type: String, select: false },
+    passwordResetExpiresAt: { type: Date, select: false },
     role: { type: String, enum: ["user", "admin"], default: "user" },
     slug: { type: String, required: true, unique: true, index: true },
     jobTitle: { type: String },
@@ -66,4 +70,3 @@ const User = models.User || model<UserSchema>("User", userSchema);
 export type UserDocument = HydratedDocument<UserSchema>;
 
 export default User;
-

@@ -345,6 +345,12 @@ const Page: React.FC = () => {
                         : "Get started"}
                       <ArrowRight className="ml-2" size={16} />
                     </button>
+                    <a
+                      href="/forgot-password"
+                      className="mt-3 inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white transition-all hover:bg-black/80">
+                      Forgot password?
+                      <ArrowRight className="ml-2" size={16} />
+                    </a>
                   </div>
                 </div>
               </form>

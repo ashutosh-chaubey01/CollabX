@@ -61,7 +61,7 @@ function Nav() {
          <a className={variants.navStyle} href="/explore-projects">
           Explore Projects
         </a>
-        <a className={variants.navStyle} href="/explore">
+        <a className={variants.navStyle} href="/hackathons">
           Hackathon
         </a>
         {!logging ? (

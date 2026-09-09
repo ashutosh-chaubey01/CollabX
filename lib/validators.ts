@@ -13,6 +13,15 @@ export const loginSchema = z.object({
   password: z.string().min(6, "Password is required"),
 });
 
+export const forgotPasswordSchema = z.object({
+  email: z.string().email("Valid email is required"),
+});
+
+export const resetPasswordSchema = z.object({
+  token: z.string().min(1, "Reset token is required"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+});
+
 export const profileUpdateSchema = z.object({
   fullName: z.string().min(2).optional(),
   jobTitle: z.string().optional(),
@@ -60,4 +69,3 @@ export const cardUpsertSchema = z.object({
   headline: z.string().optional(),
   subHeadline: z.string().optional(),
 });
-

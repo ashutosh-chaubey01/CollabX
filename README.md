@@ -1,4 +1,4 @@
-🚀 CollabX
+cd🚀 CollabX
 CollabX is a full-stack collaboration platform built with Next.js App Router, MongoDB, and JWT authentication.
 It supports secure authentication, persistent user sessions, and protected routes.
 
